@@ -1,10 +1,11 @@
 package Zombie;
 import Main.Vector2;
+import Maze.mazeItem;
 import Strategy.AttackStrategy;
 
 
 
-public class Zombie implements NoiseObserver 
+public class Zombie extends mazeItem implements NoiseObserver
 {
 	Vector2 coords = new Vector2( 1, 1 );
 	AttackStrategy strategy;

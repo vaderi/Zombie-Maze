@@ -1,6 +1,6 @@
 package Strategy;
 import Zombie.Zombie;
-import Main.Maze;
+import Maze.Maze;
 
 public interface AttackStrategy 
 {

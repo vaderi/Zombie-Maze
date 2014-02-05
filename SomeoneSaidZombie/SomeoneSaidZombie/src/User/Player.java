@@ -2,8 +2,9 @@ package User;
 import Zombie.NoiseObserver;
 import Main.Vector2;
 import Main.playerObserver;
+import Maze.mazeItem;
 
-public class Player implements NoiseObservable, playerObservable
+public class Player extends mazeItem implements NoiseObservable, playerObservable
 {
 	private int x;
 	private int y;

@@ -5,8 +5,8 @@ import java.util.Vector;
 import Zombie.Zombie;
 import Cell.Cell;
 import Cell.CellRecord;
-import Main.Maze;
 import Main.Vector2;
+import Maze.Maze;
 
 
 public class SeekStrategy implements AttackStrategy

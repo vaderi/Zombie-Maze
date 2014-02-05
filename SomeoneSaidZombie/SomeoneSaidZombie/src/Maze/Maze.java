@@ -1,10 +1,11 @@
-package Main;
+package Maze;
 //import java.awt.event.KeyEvent;
 //import java.awt.event.KeyListener;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Random;
 
+import Main.Vector2;
 import Strategy.SeekStrategy;
 import Strategy.WaitStrategy;
 import Test.LurkStrategy;

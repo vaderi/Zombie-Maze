@@ -6,6 +6,8 @@ import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
+import Maze.Maze;
+
 
 public class Game implements KeyListener
 {

@@ -9,8 +9,8 @@ import org.junit.Test;
 import org.mockito.Mock;
 
 import Cell.Cell;
-import Main.Maze;
 import Main.Vector2;
+import Maze.Maze;
 
 
 public class _MazeTest {
