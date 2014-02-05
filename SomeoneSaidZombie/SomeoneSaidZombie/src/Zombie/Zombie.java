@@ -4,7 +4,7 @@ import Strategy.AttackStrategy;
 
 
 
-public class Zombie 
+public class Zombie implements NoiseObserver 
 {
 	Vector2 coords = new Vector2( 1, 1 );
 	AttackStrategy strategy;
@@ -45,4 +45,11 @@ public class Zombie
 	public void setMovesTillPlay( int moves ) { movesTillPlay = moves; }
 	public Vector2 getCoords(){ return coords; }
 	public boolean isReady() { return ready; }
+
+	@Override
+	public void onNoise() 
+	{
+		// TODO Auto-generated method stub
+		
+	}
 }

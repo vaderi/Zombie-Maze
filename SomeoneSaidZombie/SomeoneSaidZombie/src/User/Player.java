@@ -1,7 +1,9 @@
 package User;
+import Zombie.NoiseObserver;
 import Main.Vector2;
+import Main.playerObserver;
 
-public class Player 
+public class Player implements NoiseObservable, playerObservable
 {
 	private int x;
 	private int y;
@@ -45,5 +47,47 @@ public class Player
 	public int getY() { return y; }
 	public Vector2 getLocation() { return new Vector2( x, y); }
 	public boolean getIsDead() { return isDead; }
+
+	@Override
+	public void addObserver(playerObserver newObserver) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeObserver(playerObserver targetObserver) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void move() 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addObserver(NoiseObserver newObserver) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeObserver(NoiseObserver targetObserver) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void noise() 
+	{
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
