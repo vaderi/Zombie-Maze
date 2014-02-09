@@ -1,10 +1,9 @@
-package Test;
+package Strategy;
 import java.util.ArrayList;
 
 import Main.Main;
 import Main.Vector2;
 import Maze.Maze;
-import Strategy.AttackStrategy;
 import Zombie.Zombie;
 
 

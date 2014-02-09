@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import Main.Vector2;
+import Strategy.LurkStrategy;
 import Strategy.SeekStrategy;
 import Strategy.WaitStrategy;
-import Test.LurkStrategy;
 import User.Player;
 import Zombie.Zombie;
 import Cell.Cell;

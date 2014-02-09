@@ -2,11 +2,14 @@ package Zombie;
 import Main.Vector2;
 import Maze.mazeItem;
 import Strategy.AttackStrategy;
+import Strategy.SeekStrategy;
 
 
 
 public class Zombie extends mazeItem implements NoiseObserver
 {
+	private static SeekStrategy seek = new SeekStrategy();
+
 	Vector2 coords = new Vector2( 1, 1 );
 	AttackStrategy strategy;
 	private int movesTillPlay = 3;
@@ -50,7 +53,6 @@ public class Zombie extends mazeItem implements NoiseObserver
 	@Override
 	public void onNoise() 
 	{
-		// TODO Auto-generated method stub
-		
+		setStrategy( seek );
 	}
 }

@@ -1,9 +1,12 @@
-package Main;
+package Panels;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
-public class controlPanel implements playerObserver 
+import Main.playerObserver;
+
+public class controlPanel extends JPanel implements playerObserver
 {
 	private JLabel turnLeftLabel;
 	private JButton fireButton;
@@ -11,7 +14,6 @@ public class controlPanel implements playerObserver
 	@Override
 	public void onMove() 
 	{
-		// TODO Auto-generated method stub
-
+		
 	}
 }

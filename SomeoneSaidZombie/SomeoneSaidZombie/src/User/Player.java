@@ -1,4 +1,8 @@
 package User;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
 import Zombie.NoiseObserver;
 import Main.Vector2;
 import Main.playerObserver;
@@ -10,6 +14,9 @@ public class Player extends mazeItem implements NoiseObservable, playerObservabl
 	private int y;
 	private boolean hasKey = false;
 	private boolean isDead = false;
+	
+	private static Set<NoiseObserver> noiseObservers = new HashSet<NoiseObserver>();
+	private static Set<playerObserver> playerObservers = new HashSet<playerObserver>();
 	
 	public Player( int startX, int startY)
 	{
@@ -52,43 +59,45 @@ public class Player extends mazeItem implements NoiseObservable, playerObservabl
 	@Override
 	public void addObserver(playerObserver newObserver) 
 	{
-		// TODO Auto-generated method stub
-		
+		playerObservers.add( newObserver );
 	}
 
 	@Override
 	public void removeObserver(playerObserver targetObserver) 
 	{
-		// TODO Auto-generated method stub
-		
+		playerObservers.remove( targetObserver );
 	}
 
 	@Override
 	public void move() 
 	{
-		// TODO Auto-generated method stub
-		
+		Iterator<playerObserver> iter = playerObservers.iterator();
+		while( iter.hasNext() )
+		{
+			iter.next().onMove();
+		}
 	}
 
 	@Override
 	public void addObserver(NoiseObserver newObserver) 
 	{
-		// TODO Auto-generated method stub
-		
+		noiseObservers.add( newObserver );
 	}
 
 	@Override
 	public void removeObserver(NoiseObserver targetObserver) 
 	{
-		// TODO Auto-generated method stub
-		
+		noiseObservers.remove( targetObserver );
 	}
 
 	@Override
 	public void noise() 
 	{
-		// TODO Auto-generated method stub
-		
+		Iterator<NoiseObserver> iter = noiseObservers.iterator();
+		while( iter.hasNext() )
+		{
+			iter.next().onNoise();
+		}
 	}
 	
 }
